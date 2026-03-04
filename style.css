@@ -1,0 +1,209 @@
+/* General */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #252e3b;
+  color: #e6edf3;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(13, 17, 23, 0.95);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  border-bottom: 1px solid #21262d;
+  z-index: 10;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #e6edf3;
+}
+.logo span {
+  color: #58a6ff;
+}
+
+.nav-links a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #8b949e;
+  transition: color 0.3s;
+}
+.nav-links a:hover {
+  color: #58a6ff;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 150px 20px 100px;
+  background: radial-gradient(circle at top left, #1e2a38, #0d1117);
+}
+
+header h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+.gradient {
+  background: linear-gradient(90deg, #58a6ff, #7ee787);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+header p {
+  font-size: 1.1rem;
+  color: #a6b1b9;
+  margin-top: 10px;
+}
+
+/* ---- Intro layout ---- */
+
+.profile-pic {
+  width: 180px;                /* adjust image size */
+  height: 180px;
+  border-radius: 50%;          /* makes it circular */
+  object-fit: cover;           /* crops image nicely if not square */
+  border: 3px solid #58a6ff;   /* blue border */
+  box-shadow: 0 4px 15px rgba(88, 166, 255, 0.3); /* subtle glow */
+}
+
+.intro-content {
+  display: flex;               /* aligns items side by side (image + text) */
+  align-items: center;         /* vertically centers them */
+  justify-content: center;     /* centers the whole thing horizontally */
+  gap: 40px;                   /* space between image and text */
+  flex-wrap: wrap;             /* makes it responsive on smaller screens */
+  margin-top: 50px;            /* space below navbar */
+}
+
+.intro-text {
+  max-width: 500px;            /* keeps text from going too wide */
+  text-align: left;            /* aligns text properly beside image */
+}
+.intro-text h1 {
+  font-size: 2.3rem;
+  margin: 0;
+}
+
+.intro-text p {
+  color: #a6b1b9;
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
+
+/* Sections */
+section {
+  max-width: 950px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+h2 {
+  color: #58a6ff;
+  border-bottom: 2px solid #30363d;
+  padding-bottom: 8px;
+  margin-bottom: 25px;
+}
+
+/* Projects */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.project-card {
+  background-color: #161b22;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(88,166,255,0.2);
+}
+.project-card h3 {
+  color: #7ee787;
+}
+.project-card p {
+  color: #c9d1d9;
+}
+.project-card a {
+  color: #58a6ff;
+  text-decoration: none;
+  font-weight: 600;
+}
+.project-card a:hover {
+  text-decoration: underline;
+}
+
+/* Skills */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.skills-grid span {
+  background: linear-gradient(135deg, #21262d, #30363d);
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+/* Contact */
+.buttons {
+  margin-top: 30px;
+}
+
+.btn {
+  background-color: #161b22;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.btn.alt {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  background-color: #2ea043;
+}
+
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 30px;
+  font-size: 0.9rem;
+  color: #8b949e;
+  border-top: 1px solid #30363d;
+}
+
+/* Animations */
+.fade {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+.fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
